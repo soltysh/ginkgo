@@ -50,3 +50,19 @@ func containerName(containers []*containernode.ContainerNode) string {
 	}
 	return parent
 }
+
+func (suite *Suite) ClearBeforeSuiteNode() {
+	suite.beforeSuiteNode = nil
+}
+
+func (suite *Suite) ClearAfterSuiteNode() {
+	suite.afterSuiteNode = nil
+}
+
+func (suite *Suite) GetBeforeSuiteNode() leafnodes.SuiteNode {
+	return suite.beforeSuiteNode
+}
+
+func (suite *Suite) GetAfterSuiteNode() leafnodes.SuiteNode {
+	return suite.afterSuiteNode
+}
